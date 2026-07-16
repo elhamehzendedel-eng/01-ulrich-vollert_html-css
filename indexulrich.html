@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lena Brandt – Portfolio</title>
+  </head>
+  <body>
+    <!-- ───────────────────────────────── -->
+    <!-- Kopfbereich mit Navigation -->
+    <!-- ───────────────────────────────── -->
+    <header>
+      <h1>Lena Brandt</h1>
+      <p>Webentwicklerin in Ausbildung</p>
+
+      <nav>
+        <ul>
+          <li><a href="#ueber-mich">Über mich</a></li>
+          <li><a href="#faehigkeiten">Fähigkeiten</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ───────────────────────────────── -->
+      <!-- Abschnitt: Über mich oder so -->
+      <!-- ───────────────────────────────── -->
+      <section id="ueber-mich">
+        <h2>Über mich und nicht andere </h2>
+
+        <figure>
+          <img
+            src="bilder/lena-brandt.svg"
+            alt="Portraitfoto von Lena Brandt, lächelnd vor neutralem Hintergrund"
+            width="200"
+          />
+          <figcaption>Lena Brandt, angehende Webentwicklerin</figcaption>
+        </figure>
+
+        <p>
+          Ich beschäftige mich seit einigen Monaten intensiv mit Webentwicklung
+          und arbeite gerade an meinem ersten eigenen Portfolio. Hier ein paar
+          Dinge, die mich ausmachen.
+        </p>
+
+        <h3>Meine Interessen</h3>
+        <ul>
+          <li>HTML &amp; CSS</li>
+          <li>Fotografie</li>
+          <li>Wandern</li>
+          <li>Nachhaltige Ernährung</li>
+          <li>Podcasts über Technik</li>
+        </ul>
+
+        <h3>Meine Top 3 Skills</h3>
+        <ol>
+          <li>Strukturiertes, semantisches HTML</li>
+          <li>Sorgfältige, verständliche Texte</li>
+          <li>Teamarbeit und Feedback annehmen</li>
+        </ol>
+
+        <p>
+          Mehr über die Grundlagen, die ich gerade lerne, findest du z. B. auf
+          <a
+            href="https://developer.mozilla.org/de/docs/Web/HTML"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MDN Web Docs</a
+          >.
+        </p>
+      </section>
+
+      <!-- ───────────────────────────────── -->
+      <!-- Abschnitt: Fähigkeiten (Tabelle) -->
+      <!-- ───────────────────────────────── -->
+      <section id="faehigkeiten">
+        <h2>Fähigkeiten-Übersicht</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Bereich</th>
+              <th scope="col">Kenntnisstand</th>
+              <th scope="col">Seit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">HTML</th>
+              <td>Fortgeschritten</td>
+              <td>3 Monate</td>
+            </tr>
+            <tr>
+              <th scope="row">CSS</th>
+              <td>Einsteiger</td>
+              <td>1 Woche</td>
+            </tr>
+            <tr>
+              <th scope="row">Barrierefreiheit</th>
+              <td>Grundlagen</td>
+              <td>2 Wochen</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ───────────────────────────────── -->
+      <!-- Abschnitt: Kontaktformular -->
+      <!-- ───────────────────────────────── -->
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+
+        <p>
+          Schreib mir gerne direkt über
+          <a href="mailto:lena.brandt@example.com">lena.brandt@example.com</a>
+          oder nutze das folgende Formular.
+        </p>
+
+        <form action="https://httpbin.org/post" method="post">
+          <div>
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">E-Mail*</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" />
+          </div>
+
+          <div>
+            <label for="betreff">Betreff*</label>
+            <input type="text" id="betreff" name="betreff" required />
+          </div>
+
+          <div>
+            <label for="nachricht">Nachricht*</label>
+            <textarea
+              id="nachricht"
+              name="nachricht"
+              rows="6"
+              placeholder="Deine Nachricht..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit">Absenden</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Lena Brandt</p>
+    </footer>
+  </body>
+</html>

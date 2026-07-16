@@ -1,0 +1,47 @@
+/*
+  (1) Warum gilt diese Farbe nicht? 
+      Farbe: darkblue
+      Gewinnt: Regel C (#titel)
+      Eine ID schlägt immer eine Klasse, egal in welcher
+
+  (2) Warum gilt diese Farbe nicht für .text? 
+      Farbe: green
+      Gewinnt: regel D 
+      .text ist ein Klassen-Selektor, p ist ein Element-Selektor.
+
+  (3) Warum gilt diese Farbe für Absätze mit .text nicht? 
+      Farbe: black
+      Gewinnt: Regel G
+      gewinnt die Regel F (#intro) mit der ID.
+*/
+
+/* Regel A */
+h1 {
+  color: gray;
+}
+/* Regel B */
+.gross {
+  color: red;       /* (1) Warum gilt diese Farbe nicht? */
+  font-size: 3rem;
+}
+/* Regel C */
+#titel {
+  color: darkblue;
+}
+/* Regel D */
+.text {
+  color: green;
+}
+/* Regel E */
+p {
+  color: orange;    /* (2) Warum gilt diese Farbe nicht für .text? */
+}
+/* Regel F */
+#intro {
+  color: purple;
+}
+/* Regel G */
+p {
+  color: black;     /* (3) Warum gilt diese Farbe für Absätze mit .text nicht? */
+  line-height: 1.4;
+}
