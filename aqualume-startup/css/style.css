@@ -1,8 +1,5 @@
 /* =====================================================
-   AquaLume — Design-Tokens
-   Farben, Schriften und Abstände werden hier zentral
-   definiert, damit sie im ganzen Projekt einheitlich
-   und einfach änderbar sind.
+   AquaLume 
 ===================================================== */
 :root {
   /* Markenfarben */
@@ -402,9 +399,6 @@ h1, h2, h3 {
     gap: var(--space-sm);
     padding: var(--space-md);
   }
-
-  /* Sobald die Checkbox angehakt ist, wird das Menü sichtbar.
-     Das ist der "Checkbox-Trick": reines CSS, kein JavaScript. */
   .nav-toggle-checkbox:checked ~ .nav {
     display: block;
   }
@@ -416,8 +410,8 @@ h1, h2, h3 {
   .product__text h1 {
     font-size: 1.6rem;
   }
-}
 
+}
 /* Berücksichtigt Nutzer, die weniger Animation bevorzugen */
 @media (prefers-reduced-motion: reduce) {
   html {
