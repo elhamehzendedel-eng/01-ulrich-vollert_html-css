@@ -1,0 +1,6 @@
+1. Ersetze alle benannten Farben durch HEX-Werte. Nutze die Browser DevTools um die HEX
+Werte der benannten Farben herauszufinden (Elements → Styles → auf die Farbe klicken).
+2. Ersetze anschließend die Hintergrundfarben durch RGBA-Werte mit 30% Deckkraft (alpha:
+0.3). Verwende dafür die RGB-Werte der jeweiligen Textfarbe als Basis.
+3. Füge einen neuen Abschnitt .dunkel hinzu mit einer Hintergrundfarbe in HSL und einer
+Textfarbe die gut darauf lesbar ist.
