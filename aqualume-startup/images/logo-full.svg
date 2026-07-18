@@ -1,0 +1,45 @@
+<svg width="360" height="140" viewBox="0 0 360 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dropGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5FD3E8"/>
+      <stop offset="100%" stop-color="#0E6E8C"/>
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5FD3E8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#5FD3E8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Water drop icon -->
+  <g transform="translate(20, 20)">
+    <path d="M 35 0
+             C 35 0 8 38 8 62
+             C 8 79.5 19.7 92 35 92
+             C 50.3 92 62 79.5 62 62
+             C 62 38 35 0 35 0 Z"
+          fill="url(#dropGradient)"/>
+
+    <!-- Inner highlight -->
+    <path d="M 24 55
+             C 24 65 30 71 38 71"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="4"
+          stroke-linecap="round"
+          opacity="0.55"/>
+
+    <!-- Glow arc suggesting the light/reminder feature -->
+    <path d="M 35 -6
+             A 45 45 0 0 1 78 36"
+          fill="none"
+          stroke="url(#glowGradient)"
+          stroke-width="3"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="105" y="72" font-family="Poppins, 'Segoe UI', sans-serif" font-size="34" font-weight="600" fill="#0E3A4C">Aqua<tspan fill="#0E6E8C" font-weight="700">Lume</tspan></text>
+
+  <!-- Tagline -->
+  <text x="107" y="95" font-family="Poppins, 'Segoe UI', sans-serif" font-size="12.5" letter-spacing="1.5" fill="#5A7A85">HYDRATION, REIMAGINED</text>
+</svg>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaLume — Startup-Projekt</title>
+  <!-- Google Fonts: Poppins für Überschriften, Inter für Fließtext -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== Header =====================
+       Enthält Logo und Firmen-Motto
+  ============================================================== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+
+      <a href="#" class="logo">
+        <img src="images/logo-icon.svg" alt="AquaLume Logo: stilisierter Wassertropfen mit Leuchtbogen" class="logo__icon">
+        <span class="logo__text">Aqua<span class="logo__accent">Lume</span></span>
+      </a>
+
+      <!-- Versteckte Checkbox, steuert das Mobil-Menü nur mit CSS -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+
+      <nav class="nav" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="#produkt">Produkt</a></li>
+          <li><a href="#eigenschaften">Eigenschaften</a></li>
+          <li><a href="#fotos">Fotos</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+      </nav>
+
+      <label for="nav-toggle" class="nav-toggle" aria-label="Menü öffnen/schließen">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <!-- ===================== Produkt & USP =====================
+       Laut Aufgabe gefordert: Produktname, Startup-Name, Motto,
+       Produkt-Beschreibung und USP.
+  ============================================================== -->
+  <section class="product" id="produkt">
+    <div class="container product__inner">
+
+      <div class="product__text">
+        <p class="eyebrow">AquaLume — Startup</p>
+        <h1>AquaLume UV Flask</h1>
+        <p class="product__motto">„Hydration, Reimagined.“</p>
+        <p class="product__desc">
+          Die AquaLume UV Flask ist eine smarte Wasserflasche, die Wasser
+          reinigt, den täglichen Trinkkonsum trackt und sich selbst sauber hält.
+        </p>
+
+        <h2 class="usp-title">USP</h2>
+        <ul class="check-list">
+          <li>Reinigt Wasser in 60 Sekunden mit UV-C-Licht</li>
+          <li>Trackt den Wasserkonsum automatisch per App</li>
+          <li>Reinigt sich selbst alle 2 Stunden, ganz ohne Chemikalien</li>
+        </ul>
+      </div>
+
+      <div class="product__image">
+        <img src="images/bottle-hero.png" alt="AquaLume UV Flask, Illustration in Türkis mit Bedienknopf" class="product__bottle-img">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== Produkt-Eigenschaften (Tabelle) ===================== -->
+  <section class="specs" id="eigenschaften">
+    <div class="container">
+      <h2 class="section-title">Produkt-Eigenschaften</h2>
+
+      <table class="specs__table">
+        <tbody>
+          <tr>
+            <th scope="row">Reinigung</th>
+            <td>UV-C, Aktivierung per Knopfdruck</td>
+          </tr>
+          <tr>
+            <th scope="row">Gehäuse</th>
+            <td>Doppelwandiger Edelstahl, isoliert (bis zu 24 Std.)</td>
+          </tr>
+          <tr>
+            <th scope="row">Tracking</th>
+            <td>Smarter Sensor + Begleit-App</td>
+          </tr>
+          <tr>
+            <th scope="row">Akku</th>
+            <td>USB-C, Laufzeit bis zu 2 Wochen</td>
+          </tr>
+          <tr>
+            <th scope="row">Größe</th>
+            <td>500 ml / 750 ml</td>
+          </tr>
+          <tr>
+            <th scope="row">Farben</th>
+            <td>Schwarz, Weiß, Waldgrün, Eisblau</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== Produktfotos ===================== -->
+  <section class="gallery" id="fotos">
+    <div class="container">
+      <h2 class="section-title">Produktfotos</h2>
+
+      <div class="gallery__grid">
+        <figure class="gallery__item">
+          <img src="images/bottle-obsidian.svg" alt="AquaLume Flasche in der Farbe Schwarz (Obsidian)">
+          <figcaption>Schwarz</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/bottle-white.svg" alt="AquaLume Flasche in der Farbe Weiß">
+          <figcaption>Weiß</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/bottle-forest.svg" alt="AquaLume Flasche in der Farbe Waldgrün">
+          <figcaption>Waldgrün</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/bottle-glacier.svg" alt="AquaLume Flasche in der Farbe Eisblau">
+          <figcaption>Eisblau</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Team & persönliche Seiten =====================
+       Laut Aufgabe gefordert: Verlinkung der persönlichen Seiten
+       mit der Seite des Startups.
+  ============================================================== -->
+  <section class="team" id="team">
+    <div class="container">
+      <h2 class="section-title">Team</h2>
+
+      <div class="team__grid team__grid--three">
+        <div class="team-card">
+          <h3>Elhameh Zendehdel</h3>
+          <p class="team-card__role">Driver</p>
+          <a href="#" class="team-card__link">Persönliche Seite</a>
+        </div>
+        <div class="team-card">
+          <h3>Blerina Rexha</h3>
+          <p class="team-card__role">Navigator</p>
+          <a href="#" class="team-card__link">Persönliche Seite</a>
+        </div>
+        <div class="team-card">
+          <h3>Gassen</h3>
+          <p class="team-card__role">Vertretung für Teilnehmer 1</p>
+          <a href="#" class="team-card__link">Persönliche Seite</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="logo logo--footer">
+        <img src="images/logo-icon.svg" alt="AquaLume Logo: stilisierter Wassertropfen mit Leuchtbogen" class="logo__icon">
+        <span class="logo__text">Aqua<span class="logo__accent">Lume</span></span>
+      </a>
+      <p class="footer__tagline">Hydration, Reimagined.</p>
+      <p class="footer__copy">© 2026 AquaLume</p>
+    </div>
+  </footer>
+
+</body>
+</html>

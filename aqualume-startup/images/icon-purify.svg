@@ -1,0 +1,28 @@
+<svg width="240" height="200" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bottleFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E4F6FA"/>
+      <stop offset="100%" stop-color="#C7EDF5"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="240" height="200" rx="16" fill="#F5FBFC"/>
+
+  <!-- Flaschen-Silhouette -->
+  <rect x="95" y="55" width="50" height="110" rx="14" fill="url(#bottleFill)" stroke="#5FD3E8" stroke-width="2"/>
+  <rect x="108" y="35" width="24" height="24" rx="6" fill="#0E6E8C"/>
+
+  <!-- UV-Lichtstrahlen -->
+  <g stroke="#5FD3E8" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <line x1="120" y1="80" x2="120" y2="140"/>
+    <line x1="102" y1="90" x2="112" y2="128"/>
+    <line x1="138" y1="90" x2="128" y2="128"/>
+  </g>
+
+  <!-- Kleine Sternchen für "sauber" -->
+  <g fill="#0E6E8C">
+    <circle cx="70" cy="70" r="3"/>
+    <circle cx="175" cy="100" r="4"/>
+    <circle cx="165" cy="150" r="2.5"/>
+  </g>
+</svg>

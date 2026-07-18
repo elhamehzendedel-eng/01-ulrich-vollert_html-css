@@ -1,0 +1,51 @@
+<svg width="320" height="420" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A8E9F5"/>
+      <stop offset="35%" stop-color="#5FD3E8"/>
+      <stop offset="75%" stop-color="#1E93B4"/>
+      <stop offset="100%" stop-color="#0E6E8C"/>
+    </linearGradient>
+    <linearGradient id="heroCap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2C4A56"/>
+      <stop offset="100%" stop-color="#0E2A34"/>
+    </linearGradient>
+    <radialGradient id="heroShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0E3A4C" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0E3A4C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="heroLed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Bodenschatten -->
+  <ellipse cx="160" cy="378" rx="88" ry="18" fill="url(#heroShadow)"/>
+
+  <!-- Deckel -->
+  <path d="M 128,30 C 128,18 138,8 160,8 C 182,8 192,18 192,30 L 192,58 L 128,58 Z" fill="url(#heroCap)"/>
+  <rect x="136" y="52" width="48" height="14" rx="4" fill="#000000" opacity="0.25"/>
+
+  <!-- Flaschenkörper -->
+  <path d="M 160,58
+           C 140,58 130,72 130,86
+           L 130,102
+           C 96,116 84,144 84,180
+           L 84,318
+           C 84,348 112,368 160,368
+           C 208,368 236,348 236,318
+           L 236,180
+           C 236,144 224,116 190,102
+           L 190,86
+           C 190,72 180,58 160,58 Z"
+        fill="url(#heroBody)"/>
+
+  <!-- Lichtreflexion -->
+  <path d="M 106,140 C 100,168 100,270 106,308" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- Bedienknopf mit Leuchteffekt -->
+  <circle cx="160" cy="168" r="30" fill="url(#heroLed)"/>
+  <circle cx="160" cy="168" r="13" fill="#0E2A34"/>
+  <circle cx="160" cy="168" r="6" fill="#F5FBFC"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg width="240" height="200" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="240" height="200" rx="16" fill="#F5FBFC"/>
+
+  <!-- Kreisender Pfeil, Symbol für den Reinigungs-Zyklus -->
+  <path d="M 120 55
+           A 45 45 0 1 1 78 88"
+        fill="none"
+        stroke="#5FD3E8"
+        stroke-width="6"
+        stroke-linecap="round"/>
+  <polygon points="78,88 68,76 92,74" fill="#5FD3E8"/>
+
+  <!-- Tropfen in der Mitte -->
+  <path d="M 120 85
+           C 120 85 106 103 106 114
+           C 106 123 112.3 130 120 130
+           C 127.7 130 134 123 134 114
+           C 134 103 120 85 120 85 Z"
+        fill="#0E6E8C"/>
+</svg>

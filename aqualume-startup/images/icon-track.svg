@@ -1,0 +1,20 @@
+<svg width="240" height="200" viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="240" height="200" rx="16" fill="#F5FBFC"/>
+
+  <!-- Handy-Silhouette -->
+  <rect x="85" y="35" width="70" height="130" rx="14" fill="#FFFFFF" stroke="#5FD3E8" stroke-width="2"/>
+  <rect x="95" y="50" width="50" height="80" rx="6" fill="#E4F6FA"/>
+  <circle cx="120" cy="150" r="5" fill="#0E6E8C"/>
+
+  <!-- Hydrations-Fortschrittsbalken -->
+  <rect x="100" y="105" width="30" height="18" rx="4" fill="#5FD3E8"/>
+  <rect x="100" y="90" width="30" height="10" rx="4" fill="#0E6E8C"/>
+
+  <!-- Tropfen-Symbol über dem Display -->
+  <path d="M 120 55
+           C 120 55 110 68 110 76
+           C 110 82.5 114.5 87 120 87
+           C 125.5 87 130 82.5 130 76
+           C 130 68 120 55 120 55 Z"
+        fill="#0E6E8C"/>
+</svg>
