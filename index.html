@@ -1,54 +1,143 @@
 <!DOCTYPE html>
 <html lang="de">
-<link rel="stylesheet" href="css/style.css">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elhameh Zendehdel — Visitenkarte</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elhameh Zendehdel – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <h1>Elhameh Zendehdel</h1>
+<div class="page">
 
-  <nav>
-    <ul>
-      <li><a href="#about">Über mich</a></li>
-      <li><a href="#interessen">Interessen</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-  </nav>
+  <header>
+    <div class="id-row">
+      <img class="logo" src="bilder/logo.png" alt="Logo">
+      <h1>Elhameh Zendehdel</h1>
+    </div>
+    <p class="tagline">IT-Entwicklerin &amp; Webgestalterin</p>
+    <nav>
+      <ul>
+        <li><a href="#ueber-mich">Über mich</a></li>
+        <li><a href="#faehigkeiten">Fähigkeiten</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="palette-strip" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  </header>
 
-  <h2 id="about">Über mich</h2>
-  <p>
-    Ich bin Elhameh Zendehdel und IT-Entwickler.
-  </p>
-  <p>
-    Gerade arbeite ich an meiner eigenen Webseite. Das macht <strong>richtig viel Spaß!</strong>
-  </p>
+  <main>
 
-  <h2 id="interessen">Meine Interessen</h2>
-  <ul>
-    <li>Webentwicklung</li>
-    <li>Fotografie</li>
-    <li>Lesen</li>
-    <li>Malen</li>
-    <li>Kochen</li>
-  </ul>
+    <section id="ueber-mich">
+      <h2>Über mich</h2>
 
-  <h2 id="skills">Top-3-Skills</h2>
-  <ol>
-    <li>Problemlösung</li>
-    <li>Teamarbeit</li>
-    <li>HTML</li>
-  </ol>
+      <figure>
+        <img src="bilder/profil.jpg" alt="Porträtfoto von Elhameh Zendehdel">
+        <figcaption>Elhameh Zendehdel</figcaption>
+      </figure>
 
-  <h2 id="kontakt">Kontakt</h2>
-  <p>
-    <a href="mailto:elhameh@gmail.com">elhameh@gmail.com</a>
-  </p>
-<footer>
-  <p>&copy; 2026 Elhameh Zendehdel</p>
-</footer>
+      <p>
+        Ich bin Elhameh Zendehdel, IT-Entwicklerin und Webgestalterin. Ich arbeite gerade an meinem eigenen Portfolio. Hier ein paar Dinge, die mich ausmachen.
+      </p>
+
+      <div class="interests-row">
+        <div class="interests-col">
+          <h3>Meine Interessen</h3>
+          <ul>
+            <li>Webentwicklung</li>
+            <li>Lesen</li>
+            <li>Fotografie</li>
+            <li>Malerei</li>
+            <li>Finanzmärkte</li>
+            <li>Kochen &amp; Backen</li>
+          </ul>
+        </div>
+
+        <div class="gallery-col">
+          <h3>Galerie</h3>
+          <div class="gallery">
+            <figure>
+              <img src="bilder/malerei.jpg" alt="Abstrakte Malerei in Gold, Blau und Grün">
+            </figure>
+            <figure>
+              <img src="bilder/fotografie-2.jpg" alt="Gewölbte Backsteinhalle mit persischen Teppichen">
+            </figure>
+            <figure>
+              <img src="bilder/fotografie-1.jpg" alt="Bemalte Tonobjekte an einer Lehmwand, Iran">
+            </figure>
+          </div>
+          <p class="gallery-caption">Malerei &middot; Fotografie</p>
+        </div>
+      </div>
+
+      <h3>Meine Top-3-Skills</h3>
+      <ol>
+        <li>Problemlösung</li>
+        <li>Teamarbeit</li>
+        <li>HTML</li>
+      </ol>
+    </section>
+
+    <section id="faehigkeiten">
+      <h2>Fähigkeiten-Übersicht</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Bereich</th>
+            <th scope="col">Kenntnisstand</th>
+            <th scope="col">Seit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">PHP &amp; SQL</th><td>Fortgeschritten</td><td>2016</td></tr>
+          <tr><th scope="row">HTML &amp; jQuery</th><td>Fortgeschritten</td><td>2016</td></tr>
+          <tr><th scope="row">WordPress</th><td>Fortgeschritten</td><td>2016</td></tr>
+          <tr><th scope="row">SEO</th><td>Fortgeschritten</td><td>2017</td></tr>
+          <tr><th scope="row">Photoshop &amp; Illustrator</th><td>Fortgeschritten</td><td>2015</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>
+        Schreib mir gerne direkt über
+        <a href="mailto:elhameh.zendedel@gmail.com">elhameh.zendedel@gmail.com</a>
+        oder nutze das folgende Formular.
+      </p>
+
+      <form action="https://httpbin.org/post" method="post">
+        <div>
+          <label for="name">Name*</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">E-Mail*</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="telefon">Telefon</label>
+          <input type="tel" id="telefon" name="telefon">
+        </div>
+        <div>
+          <label for="betreff">Betreff*</label>
+          <input type="text" id="betreff" name="betreff" required>
+        </div>
+        <div>
+          <label for="nachricht">Nachricht*</label>
+          <textarea id="nachricht" name="nachricht" rows="6" placeholder="Deine Nachricht..." required></textarea>
+        </div>
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer><p>&copy; 2026 Elhameh Zendehdel</p></footer>
+
+</div>
 </body>
 </html>
