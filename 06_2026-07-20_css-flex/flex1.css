@@ -1,0 +1,53 @@
+/* دو ستون کلی صفحه: لوگو | محتوا */
+.page {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+/* ستون اول: لوگو */
+.col-logo {
+  flex: 0 0 150px; /* عرض ثابت برای ستون لوگو */
+  display: flex;
+  align-items: center; /* لوگو رو عمودی، دقیقاً وسط ارتفاع ستون دوم قرار می‌ده */
+}
+
+.logo {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+/* ستون دوم: عنوان ناوبری + کارت‌ها */
+.col-content {
+  flex: 1; /* بقیه‌ی فضا رو بگیره */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-title {
+  margin: 0;
+}
+
+/* کارت‌ها زیر هم قرار بگیرن */
+.karten-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.karte {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.karte p {
+  flex-grow: 1;
+}
+
+.karte a {
+  margin-top: auto;
+}

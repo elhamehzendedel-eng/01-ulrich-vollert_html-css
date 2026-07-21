@@ -1,0 +1,13 @@
+.box{
+    background-color: #f2f2f2;
+    text-align: center;
+    padding:1rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+.box:first-child{
+    grid-column:1/-1;
+}

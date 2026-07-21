@@ -1,0 +1,23 @@
+.karten-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background-color: #f0f0f0;
+}
+.karte {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #fff; 
+}
+.karte p { flex-grow: 1; }    
+.karte a { margin-top: auto; }
+
+.navbar .logo {
+  display: flex;
+  flex-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}  
