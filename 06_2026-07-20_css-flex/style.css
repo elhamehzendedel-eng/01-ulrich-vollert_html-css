@@ -1,0 +1,312 @@
+/* ===================== پایه ===================== */
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fafafa;
+}
+h1 { color: #1a1a2e; }
+.note {
+  color: #555;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+pre {
+  background: #1a1a2e;
+  color: #f0f0f0;
+  padding: 14px 18px;
+  border-radius: 6px;
+  overflow-x: auto;
+  direction: ltr;
+  text-align: left;
+  font-size: 0.9rem;
+  margin: 6px 0 14px 0;
+}
+pre code {
+  font-family: "Consolas", "Courier New", monospace;
+  color: #f0f0f0;
+  background: none;
+}
+h2 {
+  margin-top: 50px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #b3123f;
+  color: #b3123f;
+}
+h3 { margin-top: 25px; }
+
+/* کادر عمومی برای همه دموها */
+.container {
+  display: flex;
+  background: #f0f0f0;
+  border: 2px solid #333;
+  margin-bottom: 10px;
+  min-height: 70px;
+}
+.container > div {
+  background: #4CAF50;
+  color: #fff;
+  padding: 10px 16px;
+  margin: 4px;
+}
+.box {
+  width: 60px;
+  height: 60px;
+  background: #4CAF50;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.box.tall { height: 100px; }
+
+/* ===================== 1. Grundkonzepte ===================== */
+.demo-basic {
+  width: 100%;
+}
+
+/* ===================== 2. Achsen ===================== */
+.demo-row       { flex-direction: row; width: 100%; }
+.demo-row-reverse { flex-direction: row-reverse; width: 100%; }
+.demo-column    { flex-direction: column; width: 250px; }
+.demo-column-reverse { flex-direction: column-reverse; width: 250px; }
+
+/* ===================== 3. justify-content ===================== */
+.demo-justify-start   { justify-content: flex-start; width: 100%; }
+.demo-justify-end     { justify-content: flex-end; width: 100%; }
+.demo-justify-center  { justify-content: center; width: 100%; }
+.demo-justify-between { justify-content: space-between; width: 100%; }
+.demo-justify-around  { justify-content: space-around; width: 100%; }
+.demo-justify-evenly  { justify-content: space-evenly; width: 100%; }
+
+/* ===================== 4. align-items ===================== */
+.demo-align-stretch { align-items: stretch; height: 120px; width: 100%; }
+.demo-align-start   { align-items: flex-start; height: 120px; width: 100%; }
+.demo-align-end     { align-items: flex-end; height: 120px; width: 100%; }
+
+.demo-center-both {
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+}
+
+/* ===================== 5. Kinder-Eigenschaften ===================== */
+.demo-grow { width: 600px; }
+.item-a { flex-grow: 1; }
+.item-b { flex-grow: 2; }
+
+.demo-grow-equal { width: 100%; }
+.demo-grow-equal .item { flex-grow: 1; }
+
+.demo-shrink { width: 300px; }
+.shrink-a { flex-shrink: 1; flex-basis: 200px; }
+.shrink-b { flex-shrink: 2; flex-basis: 200px; }
+.shrink-c { flex-shrink: 0; flex-basis: 200px; }
+
+.demo-flex-shorthand { width: 100%; }
+.flex-1     { flex: 1; }
+.flex-2     { flex: 2 1 0; }
+.flex-fixed { flex: 0 0 200px; }
+
+.demo-align-self {
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+.self-item { width: 150px; text-align: center; }
+.self-start { align-self: flex-start; }
+.self-end   { align-self: flex-end; }
+
+.demo-order .order-a { order: 2; }
+.demo-order .order-b { order: 3; }
+.demo-order .order-c { order: 1; }
+.demo-order { width: 100%; }
+
+.demo-gap {
+  gap: 16px;
+  width: 100%;
+}
+.demo-gap > .box { margin: 0; } /* gap جایگزین margin می‌شود */
+
+/* ===================== 6. Flexbox Praxis ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a2e;
+  margin-bottom: 20px;
+}
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.demo-wrap {
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+.wrap-item {
+  flex: 1 1 200px;
+  background: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.karten-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+.karte {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.karte h3 { margin-top: 0; color: #1a1a2e; }
+.karte p { flex-grow: 1; }
+.karte a { margin-top: auto; color: #b3123f; }
+
+/* ===================== 7. Flexbox Vertiefung ===================== */
+.layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.sidebar {
+  flex: 0 0 200px;
+  background: #e0e0e0;
+  padding: 1rem;
+}
+.inhalt {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 1rem;
+}
+
+.seite {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  border: 2px solid #333;
+  margin-bottom: 20px;
+}
+.header {
+  padding: 1rem;
+  background: #1a1a2e;
+  color: #fff;
+}
+.content {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  padding: 1rem;
+}
+.sidebar2 { flex: 0 0 150px; background: #e0e0e0; padding: 1rem; }
+.inhalt2  { flex: 1; background: #f5f5f5; padding: 1rem; }
+.footer {
+  margin-top: auto;
+  padding: 1rem;
+  background-color: #1a1a2e;
+  color: #fff;
+}
+
+.footer3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: #1a1a2e;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-spalte { flex: 1 1 180px; }
+.footer-spalte h4 { margin-top: 0; }
+
+/* ===================== 8. CSS Grid ===================== */
+.grid-basic {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+.grid-basic > div,
+.grid-fr > div,
+.grid-sidebar > div {
+  background: #4CAF50;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-fr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.grid-sidebar {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.grid-areas {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar inhalt"
+    "footer footer";
+  gap: 10px;
+  min-height: 250px;
+  margin-bottom: 20px;
+}
+.g-header  { grid-area: header;  background: #1a1a2e; color: #fff; padding: 1rem; }
+.g-sidebar { grid-area: sidebar; background: #e0e0e0; padding: 1rem; }
+.g-inhalt  { grid-area: inhalt;  background: #f5f5f5; padding: 1rem; }
+.g-footer  { grid-area: footer;  background: #1a1a2e; color: #fff; padding: 1rem; }
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.grid-12 > div {
+  background: #4CAF50;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.col-6 { grid-column: span 6; }
+.col-4 { grid-column: span 4; }
+.col-8 { grid-column: span 8; }

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تمام مثال‌های Flexbox و Grid</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>تمام مثال‌های Flexbox و Grid از جزوه</h1>
+<p class="note">بالای هر مثال، کد CSS همون مثال نمایش داده شده تا ببینی دقیقاً چه اتفاقی داره می‌افته.</p>
+
+<!-- ===================== 1. Flexbox Grundkonzepte ===================== -->
+<h2>1. Flexbox Grundkonzepte</h2>
+
+<h3>Container و Items ساده</h3>
+<pre><code>.container {
+  display: flex;
+}</code></pre>
+<div class="container demo-basic">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+<!-- ===================== 2. Achsen (flex-direction) ===================== -->
+<h2>2. Achsen — flex-direction</h2>
+
+<h3>flex-direction: row (پیش‌فرض)</h3>
+<pre><code>.container {
+  display: flex;
+  flex-direction: row;
+}</code></pre>
+<div class="container demo-row">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+<h3>flex-direction: row-reverse</h3>
+<pre><code>.container {
+  display: flex;
+  flex-direction: row-reverse;
+}</code></pre>
+<div class="container demo-row-reverse">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+<h3>flex-direction: column</h3>
+<pre><code>.container {
+  display: flex;
+  flex-direction: column;
+}</code></pre>
+<div class="container demo-column">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+<h3>flex-direction: column-reverse</h3>
+<pre><code>.container {
+  display: flex;
+  flex-direction: column-reverse;
+}</code></pre>
+<div class="container demo-column-reverse">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+<!-- ===================== 3. justify-content ===================== -->
+<h2>3. justify-content</h2>
+
+<h3>flex-start</h3>
+<pre><code>.container {
+  display: flex;
+  justify-content: flex-start;
+}</code></pre>
+<div class="container demo-justify-start">
+  <div class="box">A</div><div class="box">B</div><div class="box">C</div>
+</div>
+
+<h3>flex-end</h3>
+<pre><code>.container {
+  display: flex;
+  justify-content: flex-end;
+}</code></pre>
+<div class="container demo-justify-end">
+  <div class="box">A</div><div class="box">B</div><div class="box">C</div>
+</div>
+
+<h3>center</h3>
+<pre><code>.container {
+  display: flex;
+  justify-content: center;
+}</code></pre>
+<div class="container demo-justify-center">
+  <div class="box">A</div><div class="box">B</div><div class="box">C</div>
+</div>
+
+<h3>space-between</h3>
+<pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+}</code></pre>
+<div class="container demo-justify-between">
+  <div class="box">A</div><div class="box">B</div><div class="box">C</div>
+</div>
+
+<h3>space-around</h3>
+<pre><code>.container {
+  display: flex;
+  justify-content: space-around;
+}</code></pre>
+<div class="container demo-justify-around">
+  <div class="box">A</div><div class="box">B</div><div class="box">C</div>
+</div>
+
+<h3>space-evenly</h3>
+<pre><code>.container {
+  display: flex;
+  justify-content: space-evenly;
+}</code></pre>
+<div class="container demo-justify-evenly">
+  <div class="box">A</div><div class="box">B</div><div class="box">C</div>
+</div>
+
+<!-- ===================== 4. align-items ===================== -->
+<h2>4. align-items</h2>
+
+<h3>stretch (پیش‌فرض)</h3>
+<pre><code>.container {
+  display: flex;
+  align-items: stretch;
+}</code></pre>
+<div class="container demo-align-stretch">
+  <div class="box">A</div><div class="box tall">B</div><div class="box">C</div>
+</div>
+
+<h3>flex-start</h3>
+<pre><code>.container {
+  display: flex;
+  align-items: flex-start;
+}</code></pre>
+<div class="container demo-align-start">
+  <div class="box">A</div><div class="box tall">B</div><div class="box">C</div>
+</div>
+
+<h3>flex-end</h3>
+<pre><code>.container {
+  display: flex;
+  align-items: flex-end;
+}</code></pre>
+<div class="container demo-align-end">
+  <div class="box">A</div><div class="box tall">B</div><div class="box">C</div>
+</div>
+
+<h3>center (تمرکز افقی و عمودی هم‌زمان)</h3>
+<pre><code>.container {
+  display: flex;
+  justify-content: center; /* افقی */
+  align-items: center;     /* عمودی */
+}</code></pre>
+<div class="container demo-center-both">
+  <div class="box">مرکز</div>
+</div>
+
+<!-- ===================== 5. Flexbox Kinder-Eigenschaften ===================== -->
+<h2>5. Flexbox Kinder-Eigenschaften</h2>
+
+<h3>flex-grow</h3>
+<pre><code>.container { display: flex; width: 600px; }
+.item-a { flex-grow: 1; }  /* ۱ سهم */
+.item-b { flex-grow: 2; }  /* ۲ سهم (دو برابر) */</code></pre>
+<div class="container demo-grow">
+  <div class="item-a">grow: 1</div>
+  <div class="item-b">grow: 2</div>
+</div>
+
+<h3>flex-grow: 1 روی همه (توزیع یکسان)</h3>
+<pre><code>.container { display: flex; }
+.item { flex-grow: 1; }  /* همه به یک اندازه بزرگ می‌شوند */</code></pre>
+<div class="container demo-grow-equal">
+  <div class="item">item-a</div>
+  <div class="item">item-b</div>
+  <div class="item">item-c</div>
+</div>
+
+<h3>flex-shrink</h3>
+<pre><code>.container { display: flex; width: 300px; }
+.shrink-a { flex-shrink: 1; flex-basis: 200px; } /* عادی */
+.shrink-b { flex-shrink: 2; flex-basis: 200px; } /* دو برابر جمع می‌شود */
+.shrink-c { flex-shrink: 0; flex-basis: 200px; } /* اصلاً جمع نمی‌شود */</code></pre>
+<div class="container demo-shrink">
+  <div class="shrink-a">shrink: 1</div>
+  <div class="shrink-b">shrink: 2</div>
+  <div class="shrink-c">shrink: 0</div>
+</div>
+
+<h3>flex — Kurzschreibweise</h3>
+<pre><code>.flex-1     { flex: 1; }         /* = flex: 1 1 0 */
+.flex-2     { flex: 2 1 0; }     /* دو برابر سریع‌تر رشد می‌کند */
+.flex-fixed { flex: 0 0 200px; } /* اندازه‌ی ثابت 200px */</code></pre>
+<div class="container demo-flex-shorthand">
+  <div class="flex-1">flex: 1</div>
+  <div class="flex-2">flex: 2 1 0</div>
+  <div class="flex-fixed">flex: 0 0 200px</div>
+</div>
+
+<h3>align-self</h3>
+<pre><code>.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* برای همه اعمال می‌شود */
+}
+.self-start { align-self: flex-start; } /* فقط این آیتم چپ */
+.self-end   { align-self: flex-end; }   /* فقط این آیتم راست */</code></pre>
+<div class="container demo-align-self">
+  <div class="self-item">A</div>
+  <div class="self-item self-start">B (flex-start)</div>
+  <div class="self-item">C</div>
+  <div class="self-item self-end">D (flex-end)</div>
+</div>
+
+<h3>order</h3>
+<pre><code>.order-a { order: 2; } /* دوم نمایش داده می‌شود */
+.order-b { order: 3; } /* سوم نمایش داده می‌شود */
+.order-c { order: 1; } /* اول نمایش داده می‌شود */</code></pre>
+<div class="container demo-order">
+  <div class="order-a">order: 2 (a)</div>
+  <div class="order-b">order: 3 (b)</div>
+  <div class="order-c">order: 1 (c)</div>
+</div>
+
+<h3>gap</h3>
+<pre><code>.container {
+  display: flex;
+  gap: 16px; /* فاصله‌ی یکسان بین آیتم‌ها، بدون margin دستی */
+}</code></pre>
+<div class="container demo-gap">
+  <div class="box">1</div><div class="box">2</div><div class="box">3</div>
+</div>
+
+<!-- ===================== 6. Flexbox Praxis ===================== -->
+<h2>6. Flexbox Praxis</h2>
+
+<h3>Navigationsleiste</h3>
+<pre><code>.navbar {
+  display: flex;
+  justify-content: space-between; /* لوگو چپ، لینک‌ها راست */
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}</code></pre>
+<nav class="navbar">
+  <a class="logo" href="#">Meine Seite</a>
+  <ul class="nav-links">
+    <li><a href="#">Start</a></li>
+    <li><a href="#">Über mich</a></li>
+    <li><a href="#">Kontakt</a></li>
+  </ul>
+</nav>
+
+<h3>flex-wrap</h3>
+<pre><code>.container {
+  display: flex;
+  flex-wrap: wrap; /* وقتی جا نشد، می‌رود خط بعد */
+  gap: 1rem;
+}
+.item { flex: 1 1 200px; } /* حداقل 200px، می‌تواند رشد کند */</code></pre>
+<div class="container demo-wrap">
+  <div class="wrap-item">Item 1</div>
+  <div class="wrap-item">Item 2</div>
+  <div class="wrap-item">Item 3</div>
+  <div class="wrap-item">Item 4</div>
+</div>
+
+<h3>Karten-Layout</h3>
+<pre><code>.karten-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.karte {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column; /* عنوان بالا، متن وسط، دکمه پایین */
+}
+.karte p { flex-grow: 1; }      /* متن جا را پر می‌کند */
+.karte a { margin-top: auto; }  /* دکمه همیشه ته کارت */</code></pre>
+<section class="karten-container">
+  <article class="karte">
+    <h3>HTML</h3>
+    <p>Die Grundlage jeder Webseite. Ohne HTML gibt es keine Struktur und keine Inhalte.</p>
+    <a href="#">Mehr erfahren</a>
+  </article>
+  <article class="karte">
+    <h3>CSS</h3>
+    <p>Aussehen und Layout.</p>
+    <a href="#">Mehr erfahren</a>
+  </article>
+  <article class="karte">
+    <h3>JavaScript</h3>
+    <p>Interaktivität, Animationen und dynamische Inhalte — JavaScript macht Webseiten lebendig.</p>
+    <a href="#">Mehr erfahren</a>
+  </article>
+</section>
+
+<!-- ===================== 7. Flexbox Vertiefung ===================== -->
+<h2>7. Flexbox Vertiefung</h2>
+
+<h3>Zwei-Spalten-Layout (Sidebar + Hauptinhalt)</h3>
+<pre><code>.layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start; /* ستون‌ها کش نمی‌آیند */
+}
+.sidebar { flex: 0 0 200px; } /* ثابت، نه رشد نه جمع */
+.inhalt  { flex: 1; }         /* بقیه‌ی جا را می‌گیرد */</code></pre>
+<div class="layout">
+  <div class="sidebar">
+    <h4>Navigation</h4>
+    <ul><li>Link 1</li><li>Link 2</li></ul>
+  </div>
+  <div class="inhalt">
+    <h4>Hauptinhalt</h4>
+    <p>Text des Hauptinhalts kann beliebig lang sein, ohne die Sidebar zu strecken.</p>
+  </div>
+</div>
+
+<h3>Vollständiges Seiten-Layout (Header, Content, Footer)</h3>
+<pre><code>.seite {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px; /* حداقل ارتفاع صفحه */
+}
+.content { display: flex; flex: 1; gap: 1rem; } /* پر کردن جای وسط */
+.footer  { margin-top: auto; } /* فوتر همیشه ته صفحه */</code></pre>
+<div class="seite">
+  <div class="header">Header</div>
+  <div class="content">
+    <div class="sidebar2">Sidebar</div>
+    <div class="inhalt2">Hauptinhalt</div>
+  </div>
+  <div class="footer">Footer immer unten</div>
+</div>
+
+<h3>Footer mit drei Spalten</h3>
+<pre><code>.footer3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* در صفحه‌ی کوچک زیر هم می‌روند */
+  gap: 2rem;
+}
+.footer-spalte { flex: 1 1 180px; }</code></pre>
+<div class="footer3">
+  <div class="footer-spalte">
+    <h4>Über mich</h4>
+    <p>Lena Brandt, Hamburg</p>
+  </div>
+  <div class="footer-spalte">
+    <h4>Links</h4>
+    <p>Start, Über mich, Kontakt</p>
+  </div>
+  <div class="footer-spalte">
+    <h4>Kontakt</h4>
+    <p>lena@example.com</p>
+  </div>
+</div>
+
+<!-- ===================== 8. CSS Grid ===================== -->
+<h2>8. CSS Grid — Konzept</h2>
+
+<h3>display: grid ساده (سه ستون ثابت)</h3>
+<pre><code>.grid-basic {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  gap: 1rem;
+}
+/* آیتم چهارم خودکار می‌رود خط بعد */</code></pre>
+<div class="grid-basic">
+  <div>1</div><div>2</div><div>3</div>
+  <div>4</div><div>5</div><div>6</div>
+</div>
+
+<h3>fr — سه ستون مساوی</h3>
+<pre><code>.grid-fr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* یا repeat(3, 1fr) */
+  gap: 1rem;
+}</code></pre>
+<div class="grid-fr">
+  <div>1fr</div><div>1fr</div><div>1fr</div>
+</div>
+
+<h3>Sidebar + Hauptinhalt با grid</h3>
+<pre><code>.grid-sidebar {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* ستون ثابت + ستون منعطف */
+  gap: 1rem;
+}</code></pre>
+<div class="grid-sidebar">
+  <div>250px</div><div>1fr</div>
+</div>
+
+<h3>grid-template-areas</h3>
+<pre><code>.grid-areas {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar inhalt"
+    "footer footer";
+}
+.g-header  { grid-area: header; }
+.g-sidebar { grid-area: sidebar; }
+.g-inhalt  { grid-area: inhalt; }
+.g-footer  { grid-area: footer; }</code></pre>
+<div class="grid-areas">
+  <header class="g-header">header</header>
+  <div class="g-sidebar">sidebar</div>
+  <main class="g-inhalt">inhalt</main>
+  <footer class="g-footer">footer</footer>
+</div>
+
+<h3>Bootstrap-مانند — ۱۲ ستون</h3>
+<pre><code>.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+.col-6 { grid-column: span 6; } /* 6 + 6 = 12 */
+.col-4 { grid-column: span 4; }
+.col-8 { grid-column: span 8; } /* 4 + 8 = 12 */</code></pre>
+<div class="grid-12 demo-12-1">
+  <div class="col-6">col-6</div>
+  <div class="col-6">col-6</div>
+</div>
+<div class="grid-12 demo-12-2">
+  <div class="col-4">col-4</div>
+  <div class="col-8">col-8</div>
+</div>
+
+</body>
+</html>
