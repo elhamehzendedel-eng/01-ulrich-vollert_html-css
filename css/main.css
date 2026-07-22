@@ -1,0 +1,253 @@
+/* ============================================
+   Palette — strictly black and white
+   ============================================ */
+:root{
+  --black: #000000;
+  --white: #ffffff;
+  --line: rgba(0,0,0,0.18);
+  --line-strong: rgba(0,0,0,0.55);
+  --grey: rgba(0,0,0,0.55);
+
+  /* Persian palette — used only as a small, deliberate
+     accent in the navigation, nowhere else on the page */
+  --p-navy: #223B57;
+  --p-gold: #EBA72E;
+  --p-terracotta: #B33E24;
+  --p-cream: #EEE4C8;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+/* ============================================
+   Reset & Base
+   ============================================ */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family: var(--font-body);
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 15.5px;
+}
+a{ color: var(--black); text-decoration: underline; text-underline-offset:2px; }
+img{ max-width:100%; display:block; }
+ul, ol{ list-style:none; }
+
+/* ============================================
+   Signature Motif — Persian brick-vault bond,
+   used as the hairline divider, monochrome
+   ============================================ */
+.brick-rule{
+  height: 7px; width:100%;
+  background-image: repeating-linear-gradient(
+    90deg, var(--black) 0 16px, transparent 16px 18px
+  ), repeating-linear-gradient(
+    90deg, transparent 0 8px, var(--black) 8px 9px, transparent 9px 26px
+  );
+  background-size: 18px 4px, 26px 4px;
+  background-position: 0 0, 9px 3px;
+  background-repeat: repeat-x;
+  opacity:0.9;
+}
+
+/* ============================================
+   Page
+   ============================================ */
+.page{
+  position:relative; max-width: 760px; margin: 0 auto;
+  background: var(--white); overflow:hidden;
+}
+
+/* ============================================
+   Background motif — the horse illustration,
+   shown very lightly (transparent) behind the
+   whole page, purely decorative
+   ============================================ */
+.page::before{
+  content:'';
+  position:absolute;
+  top: 0;
+  right: -80px;
+  width: 640px;
+  height: 640px;
+  max-width: 90vw;
+  background-image: url('../bilder/pferd.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   Header — small: logo + name + tagline + nav
+   ============================================ */
+header{ position:relative; z-index:1; padding: 20px 28px 0; }
+.id-row{ display:flex; align-items:center; gap:10px; }
+.id-row img.logo{ height:26px; width:auto; }
+.id-row h1{
+  font-family: var(--font-display); font-weight:700; font-size: 1.25rem;
+  color: var(--black); letter-spacing:-0.01em;
+}
+header p.tagline{
+  font-family: var(--font-mono); font-size:11px; color: var(--grey);
+  margin: 4px 0 16px; letter-spacing:0.02em;
+}
+nav{ border-top:1px solid var(--line-strong); }
+nav ul{ display:flex; }
+nav a{
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.05em;
+  color: var(--black); padding: 9px 0; margin-right:22px;
+  display:inline-flex; align-items:center; gap:6px;
+  border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease;
+  text-transform:uppercase; text-decoration:none;
+}
+/* a small dot of Persian colour per item — the one deliberate
+   spot of colour on the page outside the photograph */
+nav a::before{
+  content:''; width:6px; height:6px; border-radius:50%; background: var(--dot, var(--black));
+}
+nav li:nth-child(1) a{ --dot: var(--p-terracotta); }
+nav li:nth-child(2) a{ --dot: var(--p-gold); }
+nav li:nth-child(3) a{ --dot: var(--p-navy); }
+nav a:hover, nav a:focus-visible{ border-color: var(--dot, var(--black)); color: var(--dot, var(--black)); }
+
+/* thin Persian palette strip beneath the nav */
+.palette-strip{ display:flex; height:4px; }
+.palette-strip span{ flex:1; }
+.palette-strip span:nth-child(1){ background: var(--p-navy); }
+.palette-strip span:nth-child(2){ background: var(--p-gold); }
+.palette-strip span:nth-child(3){ background: var(--p-terracotta); }
+.palette-strip span:nth-child(4){ background: var(--p-cream); }
+
+main{ position:relative; z-index:1; }
+
+/* ============================================
+   Section rhythm — no numbering, plain heads
+   ============================================ */
+section{ padding: 26px 28px; border-bottom: 1px solid var(--line); }
+section:last-of-type{ border-bottom:none; }
+section h2{
+  font-family: var(--font-display); font-weight:600; font-size: 1.35rem;
+  color: var(--black); margin-bottom:16px; padding-bottom:8px;
+  border-bottom: 1px solid var(--black);
+}
+section h3{
+  font-family: var(--font-display); font-weight:600; font-size: 1rem;
+  color: var(--black); margin: 18px 0 8px;
+}
+section p{ color: var(--black); margin-bottom: 10px; font-size:0.95rem; max-width:56ch; }
+section p a{ font-weight:500; }
+
+/* ============================================
+   Uber mich
+   ============================================ */
+#ueber-mich figure{ margin-bottom:18px; }
+#ueber-mich figure img{
+  width: 120px; border: 1px solid var(--black);
+}
+#ueber-mich figcaption{
+  font-family: var(--font-mono); font-size:10.5px; text-transform:uppercase;
+  letter-spacing:0.06em; color: var(--grey); margin-top:8px;
+}
+.interests-row{
+  display:flex; gap:32px; align-items:center; justify-content:center;
+  margin-top:22px; text-align:center;
+}
+.interests-col{ flex: 1 1 40%; min-width:0; }
+.gallery-col{ flex: 1 1 55%; min-width:0; display:flex; flex-direction:column; align-items:center; }
+.interests-col h3, .gallery-col h3{ margin-top:0; }
+.gallery-col h3{ text-align:center; }
+.interests-col ul{ display:inline-block; text-align:left; }
+
+.gallery{
+  display:flex; gap:8px; justify-content:center;
+  margin: 0 auto;
+}
+.gallery figure{ margin:0; text-align:center; width:120px; }
+.gallery img{
+  width:120px; height:120px; display:block; object-fit:cover;
+  border: 1px solid var(--black);
+  box-shadow: 5px 5px 0 var(--accent, var(--black));
+  filter: grayscale(35%);
+  transition: filter 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.gallery figure:hover img{
+  filter:grayscale(0%);
+  box-shadow: 7px 7px 0 var(--accent, var(--black));
+  transform: translate(-2px,-2px);
+}
+.gallery figure:nth-child(1) img{ --accent: var(--p-navy); }
+.gallery figure:nth-child(2) img{ --accent: var(--p-terracotta); }
+.gallery figure:nth-child(3) img{ --accent: var(--p-gold); }
+
+.gallery-caption{
+  font-family: var(--font-mono); font-size:9.5px; text-transform:uppercase;
+  letter-spacing:0.08em; color: var(--grey); margin-top:14px; text-align:center;
+}
+
+#ueber-mich ul li, #ueber-mich ol li{
+  font-size:0.92rem; padding: 6px 0; border-top: 1px dashed var(--line);
+}
+#ueber-mich ul li:first-child, #ueber-mich ol li:first-child{ border-top:none; }
+#ueber-mich ol{ counter-reset: skill; }
+#ueber-mich ol li{ display:flex; gap:10px; }
+#ueber-mich ol li::before{
+  counter-increment: skill; content: counter(skill, decimal-leading-zero);
+  font-family: var(--font-mono); color: var(--grey); font-size:0.85rem;
+}
+
+/* ============================================
+   Fahigkeiten table
+   ============================================ */
+table{ width:100%; border-collapse: collapse; font-size:0.9rem; }
+thead th{
+  font-family: var(--font-mono); font-size:10.5px; text-transform:uppercase;
+  letter-spacing:0.06em; text-align:left; padding: 8px 10px;
+  border-bottom: 1px solid var(--black);
+}
+tbody th, tbody td{ padding: 9px 10px; border-bottom: 1px solid var(--line); text-align:left; font-weight:400; }
+tbody th{ font-family: var(--font-display); font-weight:600; }
+tbody tr:nth-child(even){ background: rgba(0,0,0,0.035); }
+
+/* ============================================
+   Kontakt
+   ============================================ */
+form{ margin-top: 16px; display:flex; flex-direction:column; gap:14px; max-width:420px; }
+form div{ display:flex; flex-direction:column; gap:5px; }
+label{ font-family: var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.04em; }
+input, textarea{
+  font-family: var(--font-body); font-size:0.92rem; padding: 8px 2px;
+  border:none; border-bottom: 1px solid var(--black); background:transparent; color:var(--black);
+  outline:none;
+}
+input:focus, textarea:focus{ border-bottom-width:2px; }
+textarea{ resize:vertical; }
+button{
+  align-self:flex-start; font-family: var(--font-mono); font-size:12px; text-transform:uppercase;
+  letter-spacing:0.06em; padding: 10px 22px; background: var(--black); color: var(--white);
+  border:none; cursor:pointer; transition: opacity 0.2s ease;
+}
+button:hover{ opacity:0.8; }
+
+footer{
+  position:relative; z-index:1; text-align:center; padding: 16px 0; font-family: var(--font-mono);
+  font-size:10.5px; color: var(--white); background: var(--black);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 640px){
+  nav ul{ flex-wrap:wrap; }
+  nav a{ margin-right:14px; }
+  #ueber-mich figure img{ width:170px; }
+  .interests-row{ flex-direction:column; gap:24px; }
+}
+@media (prefers-reduced-motion: reduce){
+  *{ transition:none !important; scroll-behavior:auto !important; }
+}
