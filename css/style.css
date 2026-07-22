@@ -5,6 +5,7 @@
 }
 nav {
   background-color: #ffffff;
+  border-radius: 5px;
 }
 nav ul {
   display: flex;
@@ -30,12 +31,17 @@ nav a {
 }
 .box:first-child {
   grid-column: 1/-1;
+  background-color: #223b57;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f2f2f2;
 }
 .box:nth-child(2) {
   grid-column: 1/-1;
+  background-color: #eba72e;
 }
 .box:last-child {
   grid-column: 1/-1;
+  background-color: #b33e24;
 }
 .box:nth-child(5) {
   grid-column: 1 / -1;
@@ -56,4 +62,9 @@ textarea {
   width: 100%;
   padding: 8px 8px;
   box-sizing: border-box;
+}
+table {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
 }

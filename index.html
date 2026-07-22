@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="meine webseite">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Startesite</title>
     <link rel="stylesheet" href="css/style.css" />
@@ -14,7 +15,7 @@
             <h1>Elhameh Zendehdel</h1>
             <figure>
               <img
-                src="bilder/1.avif"
+                src="bilder/profil.jpg"
                 alt="Portraitfoto von Elhameh Zendedel"
                 width="150"
               />
@@ -32,7 +33,7 @@
         <div class="box">
           <section id="about">
             <h2>Über mich</h2>
-            <p>Ich beschäftige mich seit einigen Wochen mit Webentwicklung.</p>
+            <p>Ich heiße Elhameh Zendedel. Ich beschäftige mich seit einigen Wochen mit Webentwicklung.  Meine Top-Skills sind HTML, CSS und JavaScript. In meiner Freizeit interessiere ich mich für Fotografie, Malen, Lesen und Kochen.</p>
           </section>
         </div>
         <div class="box">
@@ -55,12 +56,31 @@
         </div>
         <div class="box">
           <div id="contact">
-            <h2>Kontakt</h2>
-            <form class="contact">
-              <label>Name:</label>
-              <input id="name" type="text" placeholder="Name" />
-              <label>E-Mail:</label>
-              <input id="email" type="email" placeholder="E-Mail" />
+            <table style="border:1px solid black";>
+              <thead>
+              <tr>
+              <th scope="col"><h2>Kontakt</h2></th>
+              </tr>
+              <td>Kontaktieren Sie mich gerne per E-Mail oder über das Kontaktformular.</td>
+              </thead>
+              <tbody>
+              <th scope="row">
+              <tr>
+              <td>Meine E-Mail:</td>
+              </tr>
+              <tr>
+              <td><a href="mailto:elhameh.zendedel@gmial.com">elhameh.zendedel@gmial.com</td>
+              </tr>
+              </tr>
+              </th>
+              </tbody>
+            </table>
+              <form class="contact">
+              <h3>Kontaktformular:</h3>
+              <label>Name:*</label>
+              <input id="name" type="text" placeholder="Name" required/>
+              <label>E-Mail:*</label>
+              <input id="email" type="email" placeholder="E-Mail" required/>
               <label>Telefon:</label>
               <input id="phone" type="tel" placeholder="Telefon" />
               <label>Nachricht:</label>
@@ -71,7 +91,8 @@
         </div>
         <div class="box">
           <footer>
-            <p>© 2026 Elhameh Zendedel</p>
+          <a href="aqualume-startup/index.html">Besuche mein Startup-Projekt Aqualume</a>
+            <p>© 2026 Elhameh Zendehdel</p>
           </footer>
         </div>
       </div>
