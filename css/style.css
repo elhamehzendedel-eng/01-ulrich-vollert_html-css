@@ -3,6 +3,19 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+nav {
+  background-color: #ffffff;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 1rem;
+}
+nav a {
+  color: blue;
+  text-decoration: none;
+}
 .box {
   display: flex;
   flex-wrap: wrap;
